@@ -1,22 +1,19 @@
-import React, { useEffect } from 'react';
-import { BrowserView, MobileView } from 'react-device-detect';
-import { Routes, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
-import { Mobile, PC, Landing } from '../components/App';
+import MainPage from '../pages/MainPage/mainpart';
 
-import Screen1M from '../pages/Screen1/screen1m/screen1m';
+function App() {
 
-function App () {
   return (
-    <div className="App">
-      <BrowserView>
-        <h1>데스크톱브라우져!</h1>
-      </BrowserView>
-      <MobileView>
-        <h1>모바일 브라우져!</h1>
-      </MobileView>
-      
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+        </Routes>
+
+      </div>
+    </BrowserRouter>
   );
 }
 
