@@ -1,9 +1,30 @@
+@font-face {
+  font-family: "DOSSaemmul";
+  src: url("../font/DOSSaemmul.ttf"); 
+}
+
+html, body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 .App {
-  font-family: sans-serif;
+  font-family: "DOSSaemmul";
   text-align: center;
   display: flex; 
   min-height: 100vh; 
   flex-direction: column;
+}
+
+body {
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
 }
 
 * {
@@ -15,16 +36,16 @@
 #root {
   width: 100%;
 }
-body {
-  min-height: 100vh;
-  -ms-overflow-style: none;
-}
 
 .Footer {
-  padding-top: 150px;
-
 
 ::-webkit-scrollbar {
   display: none;
+  }
+}
+
+@media (max-width: 768px) { 
+  body {
+    overflow: hidden;
   }
 }

@@ -1,0 +1,28 @@
+.s-center-container {
+    margin-top: 15%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+}
+
+.s-image-container img {
+    height: auto;
+    width: 42vh;
+}
+
+.s-text-container {
+    margin-top: 3.2%;
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+    .s-center-container { 
+        margin-top: 25%;
+    }
+
+    .s-image-container img {
+        height: auto;
+        width: 90%;
+    }
+}

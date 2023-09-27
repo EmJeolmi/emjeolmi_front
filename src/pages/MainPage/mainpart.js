@@ -1,43 +1,29 @@
 import React from 'react';
 import './mainpart.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import { TitleText, Login, ClickBtn2 } from '../../components/Login/login';
+import inputIdImg from '../../images/input_id.PNG';
 
 function MainPart() {
 
   return (
     <>
-    <hr className="hr-szz" />
-
-    {/* 타이틀 & 더보기 */}
-    <div className='mainpagetitle'>
-      <div className='maindiaryt'>
-        <label className="maindiarytitle">한 줄 일기</label>
-        <button className='maindiaryplus'>더보기 +</button>
+    <TitleText />
+    <div class="wrapper-login">
+      <div className='main_login'>
+        <Login 
+           // IdInfo="내 일기주소를 입력해주세요 !"
+           // PwInfo="로그인 시 비밀번호를 입력해주세요 !"
+            labelText="아이디" 
+            idText="아이디를 입력해주세요 ~" 
+            pwText="비밀번호를 입력해주세요 ~"
+        /> 
       </div>
-      <div className='mainimaget'>
-        <label className="mainimagetitle">사진첩</label>
-        <button className='mainimageplus'>더보기 +</button>
-      </div>
+      <ClickBtn2 className="main_ClickBtn2" />
     </div>
 
-    {/* 한 줄 일기 */}
-    <div className='maindiary'>
-      <div className='maindiaryname'> {/* data 값으로 변경 */}
-          <li>김예빈</li>
-          <li>김예삔</li>
-          <li>김에빈</li>
-      </div>
-      <div className='maindiarytext'> {/* data 값으로 변경 */}
-          <label>쏼라쏼라랄랄랄라라~</label> <tr />
-          <label>쏼라쏼라~</label> <tr />
-          <label>쏼라쏼라~</label>
-      </div>
-      <div className='maindiaryheart'> {/* data 값으로 변경 */}
-          <label>♡ 250</label> <tr />
-          <label>♡ 120</label> <tr />
-          <label>♡ 30</label>
-      </div>
-    </div>
+    {/* 아이디 오류일 때 */}
+    <label className='logincheck'>이미 있는 아이디이거나 비밀번호 오류입니다.</label>
     </>
   );
 }

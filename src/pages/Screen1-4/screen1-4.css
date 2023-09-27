@@ -1,0 +1,27 @@
+.center-container {
+    margin-top: 15%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+}
+
+.image-container img {
+    height: 40vh;
+    width: auto;
+}
+
+.text-container {
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+    .center-container { 
+        margin-top: 25%;
+    }
+
+    .image-container img {
+        height: auto;
+        width: 90%;
+    }
+}
