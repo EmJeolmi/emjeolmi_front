@@ -1,0 +1,16 @@
+.copyright {
+    position: fixed;
+    bottom: 2.5%;
+    left: 0;
+    right: 0; 
+    text-align: center;
+    font-size: 10px;
+}
+.copyright a {
+    color: #efabc8; 
+    text-decoration: none; 
+}
+.copyright a:hover {
+    color: #cacaca; 
+    text-decoration: none;   
+}
