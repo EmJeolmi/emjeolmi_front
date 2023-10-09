@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import './mainpart.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { TitleText, Login, ClickBtn2, LoginFailedText } from '../../components/Login/login';
+import { TitleText, Login, ClickBtn2 } from '../../components/Login/login';
 // import inputIdImg from '../../images/input_id.PNG';
+import styled from 'styled-components';
+
+const Error = styled.strong`
+  display: ${(props) => (props.display ? 'block' : 'none')};
+`;
 
 function MainPart() {
 
@@ -10,6 +15,8 @@ function MainPart() {
     id:"",
     password:"",
   });
+
+  const [error, setError] = useState(false);
 
   return (
     <>
@@ -26,13 +33,15 @@ function MainPart() {
             setFormData={setFormData}
         /> 
       </div>
-      <ClickBtn2 className="main_ClickBtn2" formData={formData} />
+      <ClickBtn2 className="main_ClickBtn2" formData={formData} setError={setError} />
     </div>
 
     {/* 아이디 오류일 때 */}
-    <div>
-        <label className='logincheck' >이미 있는 아이디이거나 비밀번호 오류입니다.</label>
-    </div>
+    <Error display={error}>
+        <div>
+            <label className='logincheck' >이미 있는 아이디이거나 비밀번호 오류입니다.</label>
+        </div>
+    </Error>
     </>
   );
 }

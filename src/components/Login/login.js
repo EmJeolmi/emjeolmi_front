@@ -3,7 +3,7 @@ import './login.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import click1Img from '../../images/click2.png';
 import click2Img from '../../images/click1.png';
-import authAPI from '../../service/API/authAPI.js';
+import authAPI from '../../service/auth/authAPI.js';
 
 /* 타이틀 */
 export function TitleText() {
@@ -60,7 +60,7 @@ export function Login(props) {
 /* 클릭 버튼 2 (메인화면) */
 export function ClickBtn2(props) {
 
-    const { formData } = props;
+    const { formData, setError } = props;
     const [isHovered, setIsHovered] = useState(false);
 
     const onMouse = () => {
@@ -76,7 +76,7 @@ export function ClickBtn2(props) {
                 className='clickimgbtn'
                 onMouseEnter={onMouse}
                 onMouseLeave={offMouse}
-                onClick={event => { authAPI(event, formData) }}
+                onClick={event => { authAPI(event, formData, setError) }}
             >
             <img
                 src={isHovered ? click1Img : click2Img}
