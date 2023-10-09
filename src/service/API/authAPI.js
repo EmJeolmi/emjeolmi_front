@@ -4,7 +4,7 @@ export const authAPI = async (event, formData) => {
     event.preventDefault();
     console.log(formData);
     try {
-        const res = await axios.post('http://localhost:3000/api/user/login', formData, { timeout: 5000 }, {
+        const res = await axios.post('http://localhost:8080/api/user/auth', formData, { timeout: 5000 }, {
             headers: {
                 "Content-Type": 'application/json'
             }});
@@ -25,9 +25,8 @@ export const authAPI = async (event, formData) => {
         }
         else {
             alert('로그인 실패');
-        }
-        console.error('Error: ', error); 
+        }  
     }
 }
 
-export default loginAPI;
+export default authAPI;
