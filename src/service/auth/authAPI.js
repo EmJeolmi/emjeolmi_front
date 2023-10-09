@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const authAPI = async (event, formData) => {
+export const authAPI = async (event, formData, setError) => {
     event.preventDefault();
     console.log('formData: ', formData);
 
@@ -24,6 +24,7 @@ export const authAPI = async (event, formData) => {
         }
     } catch (error) {
         // 로그인 실패
+        setError(true);
         console.log('로그인 실패'); 
         console.error('Error: ', error); 
     }

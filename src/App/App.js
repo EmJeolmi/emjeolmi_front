@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
-import MainPart from '../pages/MainPage/mainpart';
+import MainPart from '../pages/MainPage/mainpart.js';
 import Footer from '../components/Footer/footer.js';
-import LandingPart from '../pages/LandingPage/landingpart';
-import Screen1_4 from '../pages/Screen1-4/screen1-4';
-import { NoDiary } from '../components/Screen1-p/screen1-p';
+import LandingPart from '../pages/LandingPage/landingpart.js';
+import Screen1_4 from '../pages/Screen1-4/screen1-4.js';
+import { NoDiary } from '../components/Screen1-p/screen1-p.js';
 
 function App() {
 
