@@ -1,0 +1,95 @@
+/* 일기 입력란 */
+.textarea-custom {
+    height: 33vh;
+    width: 32.5vh;
+    padding: 0 1.1vh;
+    resize: none;
+    background: none;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: #363636;
+    overflow-wrap: break-word;
+    white-space: pre-line;
+
+    &::-webkit-scrollbar {
+        width: 0.4vh;
+    }
+    &::-webkit-scrollbar-thumb {
+        height: 30%;
+        background-color: rgb(255, 200, 218);
+        border-radius: 18vh;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: rgb(182, 182, 182);
+        border-radius: 18vh;
+    }
+}
+
+/* 구름 버튼 */
+.cloudBtns {
+    margin-top: 5.4vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+}
+.cloudBtns img {
+    height: 4.6vh;
+    width: auto;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+.cloudBtns button {
+    margin: 0.6vh 0;
+    padding: 1vh 1vh;
+    position: absolute;
+    z-index: 0.5;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e76a9a;
+
+    &:hover {
+        color:#7c7a7b;
+    }
+}
+
+/* 버튼 간격 조정 */
+.changedBtn button {
+    margin-left: -14.6vh;
+}
+
+/* 팝업창 */
+.chdiary-p {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    z-index: 999; 
+}
+.chdiary-content {
+    position: relative;
+    text-align: center;
+}
+
+/* 닫기 버튼 */
+.close-chdiary {
+    top: 4.5vh;
+    left: 38vh;
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000; /* 맨 앞으로 보내기 */
+}
+.close-chdiary img {
+    height: 2vh;
+    width: 100%;
+    text-align: right;
+}
