@@ -19,10 +19,8 @@ export const checkMyDiaryAPI = async (event, accessToken) => {
         console.log('res.data: ', res.data);
         if (res.data.ok === true) {
             console.log('내 일기 읽어오기 성공');
-            window.location.href = "/savediary";
         } else {
             console.log('내 일기 없음');
-            window.location.href = "/writediary";
         }
     } catch(error) {
         console.log('내 일기 읽어오기 실패'); 
