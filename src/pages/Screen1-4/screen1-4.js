@@ -3,7 +3,7 @@ import './screen1-4.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import diaryBox from '../../images/diarybox.png';
 
-function Screen1_4() {
+function Screen1n4() {
 
   return (
     <div className="center-container">
@@ -17,4 +17,4 @@ function Screen1_4() {
   );
 }
 
-export default Screen1_4;
+export default Screen1n4;
