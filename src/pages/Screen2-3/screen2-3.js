@@ -12,6 +12,12 @@ import readMyDiaryAPI from '../../service/diary/readMyDiaryAPI';
 
 function Screen2n3() {
 
+    const [diaryData, setDiaryData] = useState({
+        id: '',
+        content: '',
+        time: '',
+    });
+
     const [writtenDiary, setwrittenDiary] = useState('');
 
     const [ChDiaryOn, setChDiaryOn] = useState(false); // 팝업
@@ -23,22 +29,18 @@ function Screen2n3() {
         event.stopPropagation();
     };
 
-    const getDiary = () => {{readMyDiaryAPI(setwrittenDiary)}};
-
-    useEffect(() => {
-        getDiary();
-    }, []);
+    readMyDiaryAPI(diaryData, setDiaryData);
 
     return (
         <>
         <DiaryContent 
             handleModalScroll={handleModalScroll}
-            writtenDiary={writtenDiary}
-            setwrittenDiary={setwrittenDiary}
+            diaryData={diaryData}
+            setDiaryData={setDiaryData}
         />
         <div className='cloudBtns'>
-        <ChangedBtn openChDiary={openChDiary} />
-        <CopyBtn />
+            <ChangedBtn openChDiary={openChDiary} />
+            <CopyBtn />
         </div>
         
         {/* 팝업 닫기 */}
