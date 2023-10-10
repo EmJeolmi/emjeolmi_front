@@ -5,11 +5,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 import diaryBox from '../../images/diarybox.png';
 import cloudImg from '../../images/cloud.png';
 
-import showMyDiaryAPI from "../../service/diary/showMyDiaryAPI";
+import showMyDiaryAPI from "../../service/diary/readMyDiaryAPI";
 
 export function DiaryContent(props) {
 
     const {handleModalScroll, writtenDiary, setwrittenDiary} = props;
+
+    console.log('writtenDiary: ', writtenDiary);
+    console.log('setWrittenDiary: ', setwrittenDiary);
  
     return (
         <div className="center-container">

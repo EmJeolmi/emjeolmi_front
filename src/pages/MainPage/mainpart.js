@@ -9,6 +9,10 @@ const Error = styled.strong`
   display: ${(props) => (props.display ? 'block' : 'none')};
 `;
 
+const InputNullError = styled.strong`
+  display: ${(props) => (props.display ? 'block' : 'none')};
+`;
+
 function MainPart() {
 
   const [formData, setFormData] = useState({
@@ -17,6 +21,8 @@ function MainPart() {
   });
 
   const [error, setError] = useState(false);
+  const [inputNullError, setInputNullError] = useState(false);
+
 
   return (
     <>
@@ -33,7 +39,7 @@ function MainPart() {
             setFormData={setFormData}
         /> 
       </div>
-      <ClickBtn2 className="main_ClickBtn2" formData={formData} setError={setError} />
+      <ClickBtn2 className="main_ClickBtn2" formData={formData} setError={setError} setInputNullError={setInputNullError} />
     </div>
 
     {/* 아이디 오류일 때 */}
@@ -42,6 +48,11 @@ function MainPart() {
             <label className='logincheck' >이미 있는 아이디이거나 비밀번호 오류입니다.</label>
         </div>
     </Error>
+    <InputNullError display={inputNullError}>
+        <div>
+            <label className='logincheck' >아이디와 비밀번호를 입력해주세요.</label>
+        </div>
+    </InputNullError>
     </>
   );
 }

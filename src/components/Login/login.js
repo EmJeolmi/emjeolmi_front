@@ -60,7 +60,7 @@ export function Login(props) {
 /* 클릭 버튼 2 (메인화면) */
 export function ClickBtn2(props) {
 
-    const { formData, setError } = props;
+    const { formData, setError, setInputNullError } = props;
     const [isHovered, setIsHovered] = useState(false);
 
     const onMouse = () => {
@@ -76,7 +76,7 @@ export function ClickBtn2(props) {
                 className='clickimgbtn'
                 onMouseEnter={onMouse}
                 onMouseLeave={offMouse}
-                onClick={event => { authAPI(event, formData, setError) }}
+                onClick={event => { authAPI(event, formData, setError, setInputNullError) }}
             >
             <img
                 src={isHovered ? click1Img : click2Img}
