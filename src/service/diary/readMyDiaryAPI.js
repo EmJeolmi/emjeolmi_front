@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const readMyDiaryAPI = async (setwrittenDiary) => {
+export const readMyDiaryAPI = async (diaryData, setDiaryData) => {
 
     try {
         const storedTokens = JSON.parse(localStorage.getItem('Tokens'));
@@ -20,7 +20,16 @@ export const readMyDiaryAPI = async (setwrittenDiary) => {
                     headers: headers, // 헤더 추가
                 }
             );
-            console.log('res.....: ', res);
+            diaryData = res.data.data;
+            // console.log('--------&&', diaryData[0].rid);
+            // console.log('--------&&', diaryData[0].content);
+            // console.log('--------&&', diaryData[0].time);
+            // const rid = diaryData[0].rid;
+            const content = diaryData[0].content;
+            const time = diaryData[0].time;
+            const id = res.data.id[0].id;
+            // console.log('***', id);
+            setDiaryData({ id, content, time });
         }
     } catch(error) {
         console.log('내 일기 읽어오기 실패'); 
