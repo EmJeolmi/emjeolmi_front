@@ -7,7 +7,8 @@ import cloudImg from '../../images/cloud.png';
 import closepImg from '../../images/closep.png';
 
 import { DiaryContent, ChangedBtn, CopyBtn } from '../../components/Screen2/screesn2-3.js';
-import showMyDiaryAPI from '../../service/diary/showMyDiaryAPI';
+import showMyDiaryAPI from '../../service/diary/readMyDiaryAPI';
+import readMyDiaryAPI from '../../service/diary/readMyDiaryAPI';
 
 function Screen2n3() {
 
@@ -22,11 +23,11 @@ function Screen2n3() {
         event.stopPropagation();
     };
 
-    // const getDiary = showMyDiaryAPI(setwrittenDiary);
+    const getDiary = () => {{readMyDiaryAPI(setwrittenDiary)}};
 
-    // useEffect(() => {
-    //     getDiary();
-    // }, []);
+    useEffect(() => {
+        getDiary();
+    }, []);
 
     return (
         <>

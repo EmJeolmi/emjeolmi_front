@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const showMyDiaryAPI = async (setwrittenDiary) => {
+export const readMyDiaryAPI = async (setwrittenDiary) => {
 
     try {
         const storedTokens = JSON.parse(localStorage.getItem('Tokens'));
@@ -28,4 +28,4 @@ export const showMyDiaryAPI = async (setwrittenDiary) => {
     }
 }
 
-export default showMyDiaryAPI;
+export default readMyDiaryAPI;
