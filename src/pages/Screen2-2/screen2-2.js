@@ -6,43 +6,32 @@ import diaryBox from '../../images/diarybox.png';
 import cloudImg from '../../images/cloud.png';
 import closepImg from '../../images/closep.png';
 
-function Screen2_2() {
+import { ContentTextarea, ChangedBtn, SaveBtn } from '../../components/Screen2/screen2-2.js';
+
+function Screen2n2() {
   const [ChDiaryOn, setChDiaryOn] = useState(false); // 팝업
 
   const openChDiary = () => { setChDiaryOn(true); };
   const closeChDiary = () => { setChDiaryOn(false); };
+
+  const [formData, setFormData] = useState({
+    content:""
+  });
   
   return (
     <>
     <div className="center-container">
-      <div className="image-container">
-        <img src={diaryBox} alt="DiaryBox" />
-      </div>
-      <div className='text-container'>
-        <label className='datewritten'></label>
-            <textarea className='wirte-contents textarea-custom' 
-                placeholder=' 일기를 작성해보세요 !'
-                spellCheck="false"
-                // ref={contentRef}
-                // value={content}
-                // onChange={(e) => setContent(e.target.value)}
-            />
-        <label className='diarywriter'></label>
-      </div>
+        <div className="image-container">
+            <img src={diaryBox} alt="DiaryBox" />
+        </div>
+        <ContentTextarea 
+            formData={formData}
+            setFormData={setFormData}
+        />
     </div>
     <div className='cloudBtns'>
-      <div className='changedBtn'>
-        <img src={cloudImg} alt="ChangedBtn" />
-        <button className='chBtn'
-          onClick={openChDiary}
-        >교환한 일기</button>
-      </div>
-      <div className='saveBtn'>
-        <img src={cloudImg} alt="SaveBtn" />
-        <button className='svBtn'>
-          저장하기
-        </button>
-      </div>
+        <ChangedBtn openChDiary={openChDiary} />
+        <SaveBtn formData={formData} />
     </div>
 
     {/* 팝업 닫기 */}
@@ -60,4 +49,4 @@ function Screen2_2() {
   );
 }
 
-export default Screen2_2;
+export default Screen2n2;

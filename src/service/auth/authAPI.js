@@ -1,4 +1,5 @@
 import axios from 'axios';
+import checkMyDiaryAPI from '../diary/checkMyDiaryAPI.js';
 
 export const authAPI = async (event, formData, setError) => {
     event.preventDefault();
@@ -20,7 +21,7 @@ export const authAPI = async (event, formData, setError) => {
         }))
         if (localStorage.getItem('Tokens') !== null) {
             console.log('로그인 성공'); 
-            return res.data.data.ok;
+            checkMyDiaryAPI(event, res.data.data.accessToken);
         }
     } catch (error) {
         // 로그인 실패

@@ -3,7 +3,7 @@ import './screen1-3.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import diaryBox from '../../images/diarybox.png';
 
-function Screen1_3() {
+function Screen1n3() {
     const handleModalScroll = (event) => {
       event.stopPropagation();
     };
@@ -26,4 +26,4 @@ function Screen1_3() {
   );
 }
 
-export default Screen1_3;
+export default Screen1n3;
