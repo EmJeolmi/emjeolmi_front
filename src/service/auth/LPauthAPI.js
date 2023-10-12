@@ -1,7 +1,7 @@
 import axios from 'axios';
-import checkMyDiaryAPI from '../diary/checkMyDiaryAPI.js';
+import LPcheckMyDiaryAPI from '../diary/LPcheckMyDiaryAPI.js';
 
-export const authAPI = async (event, formData, setError, setInputNullError) => {
+export const LPauthAPI = async (event, formData, setError, setInputNullError) => {
     event.preventDefault();
     console.log('formData: ', formData);
 
@@ -27,10 +27,7 @@ export const authAPI = async (event, formData, setError, setInputNullError) => {
             }))
             if (localStorage.getItem('Tokens') !== null) {
                 console.log('로그인 성공'); 
-                checkMyDiaryAPI(event, res.data.data.accessToken);
-                if (res.data.ok === true) {
-                    window.location.href = "../readdiary"
-                }
+                LPcheckMyDiaryAPI(event, res.data.data.accessToken);
             }
         } catch (error) {
             // 로그인 실패
@@ -42,4 +39,4 @@ export const authAPI = async (event, formData, setError, setInputNullError) => {
     }
 }
 
-export default authAPI;
+export default LPauthAPI;
