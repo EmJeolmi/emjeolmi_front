@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const checkMyDiaryAPI = async (event, accessToken) => {
+export const LPcheckMyDiaryAPI = async (event, accessToken) => {
     event.preventDefault();
 
     try {
@@ -19,9 +19,10 @@ export const checkMyDiaryAPI = async (event, accessToken) => {
         console.log('res.data: ', res.data);
         if (res.data.ok === true) {
             console.log('내 일기 읽어오기 성공');
-            // 추가하세요...
+            window.location.href = "../readdiary";
         } else {
             console.log('내 일기 없음');
+            window.location.href = "../popupcheck";
         }
     } catch(error) {
         console.log('내 일기 읽어오기 실패'); 
@@ -29,4 +30,4 @@ export const checkMyDiaryAPI = async (event, accessToken) => {
     }
 }
 
-export default checkMyDiaryAPI;
+export default LPcheckMyDiaryAPI;
