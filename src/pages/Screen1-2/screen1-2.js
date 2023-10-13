@@ -1,5 +1,5 @@
 import React from "react";
-import "./screen1-p.css";
+import "./screen1-2.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import MinidiaryBox from '../../images/minidiarybox.png';
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './mainpart.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { TitleText, Login, ClickBtn2 } from '../../components/Login/login';
+import { TitleText, Login, ClickBtnM } from '../../components/Login/login';
 // import inputIdImg from '../../images/input_id.PNG';
 import styled from 'styled-components';
 
@@ -39,7 +39,7 @@ function MainPart() {
             setFormData={setFormData}
         /> 
       </div>
-      <ClickBtn2 className="main_ClickBtn2" formData={formData} setError={setError} setInputNullError={setInputNullError} />
+      <ClickBtnM className="main_ClickBtnM" formData={formData} setError={setError} setInputNullError={setInputNullError} />
     </div>
 
     {/* 아이디 오류일 때 */}
