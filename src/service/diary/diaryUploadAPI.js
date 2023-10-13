@@ -30,7 +30,7 @@ export const diaryUploadAPI = async (event, formData) => {
             console.log('res.data.ok: ', res.data.ok);
             if (res.data.ok === true) {
                 console.log('일기 등록 성공');
-                window.location.href = "../savediary";
+                window.location.href = "/chainary/savediary";
             }
         }
     } catch (error) {

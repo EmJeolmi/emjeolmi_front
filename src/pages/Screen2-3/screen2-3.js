@@ -2,12 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './screen2-3.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { ChDiary } from '../../components/Screen3-p/screen3-p';
-import diaryBox from '../../images/diarybox.png';
-import cloudImg from '../../images/cloud.png';
 import closepImg from '../../images/closep.png';
 
 import { DiaryContent, ChangedBtn, CopyBtn } from '../../components/Screen2/screesn2-3.js';
-import showMyDiaryAPI from '../../service/diary/readMyDiaryAPI';
 import readMyDiaryAPI from '../../service/diary/readMyDiaryAPI';
 
 function Screen2n3() {
@@ -17,8 +14,6 @@ function Screen2n3() {
         content: '',
         time: '',
     });
-
-    const [writtenDiary, setwrittenDiary] = useState('');
 
     const [ChDiaryOn, setChDiaryOn] = useState(false); // 팝업
 

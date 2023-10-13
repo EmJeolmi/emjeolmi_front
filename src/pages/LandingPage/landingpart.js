@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState  } from 'react';
 import axios from 'axios';
 import './landingpart.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -7,9 +7,12 @@ import { NoDiary } from '../../components/Screen1-p/screen1-p';
 import click1Img from '../../images/click2.png';
 import click2Img from '../../images/click1.png';
 import closepImg from '../../images/closep.png';
-import { authAPI } from '../../service/auth/authAPI.js';
+import { LPauthAPI } from '../../service/auth/LPauthAPI.js';
+import { useNavigate, useParams } from "react-router-dom";
 
 function LandingPart() {
+
+    const { yourID } = useParams();
 
     const [formData, setFormData] = React.useState({
         id:"",
@@ -31,12 +34,20 @@ function LandingPart() {
         event.preventDefault();
         try {
             // 로그인 시 authAPI 호출
-            await authAPI(event, formData, setError, setInputNullError);
+            await LPauthAPI(event, formData, setError, setInputNullError, yourID);
         } catch (error) {
             // 필요한 경우 오류 처리
             console.error('로그인 중 오류 발생:', error);
         }
     };
+
+    const navigate = useNavigate();
+
+    const handleGoDiary = () => {
+        // GoDiary 버튼을 클릭했을 때 호출되는 함수
+        navigate('/'); 
+      };
+
 
     return (
         <>
@@ -65,7 +76,7 @@ function LandingPart() {
                     </button>
                 </div>
             </div>
-            <button className='GoDiary'>↪ 일기 쓰러가기</button>
+            <button className='GoDiary' onClick={handleGoDiary}>↪ 일기 쓰러가기</button>
 
             {/* 팝업 닫기 */}
             {NoDiaryOn && (

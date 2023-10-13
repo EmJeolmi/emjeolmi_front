@@ -3,7 +3,6 @@ import './screen2-2.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { ChDiary } from '../../components/Screen3-p/screen3-p';
 import diaryBox from '../../images/diarybox.png';
-import cloudImg from '../../images/cloud.png';
 import closepImg from '../../images/closep.png';
 
 import { ContentTextarea, ChangedBtn, SaveBtn } from '../../components/Screen2/screen2-2.js';
