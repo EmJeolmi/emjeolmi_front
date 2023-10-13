@@ -2,6 +2,7 @@ import axios from 'axios';
 import LPcheckMyDiaryAPI from '../diary/LPcheckMyDiaryAPI.js';
 
 export const LPauthAPI = async (event, formData, setError, setInputNullError, yourID) => {
+
     event.preventDefault();
     console.log('formData: ', formData);
 
