@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import click1Img from '../../images/click2.png';
 import click2Img from '../../images/click1.png';
 import authAPI from '../../service/auth/authAPI.js';
+import LPauthAPI from '../../service/auth/LPauthAPI';
 
 /* 타이틀 */
 export function TitleText() {
@@ -44,7 +45,7 @@ export function Login(props) {
                 <label className='pw_label' htmlFor='login_pw'>비밀번호</label>
                 <div class="background-wrap">
                     <input
-                        type='text'
+                        type='password'
                         name='password'
                         className='login_pw'
                         placeholder={pwText}
@@ -57,8 +58,8 @@ export function Login(props) {
     );
 }
 
-/* 클릭 버튼 2 (메인화면) */
-export function ClickBtn2(props) {
+/* 클릭 버튼 (메인화면) */
+export function ClickBtnM(props) {
 
     const { formData, setError, setInputNullError } = props;
     const [isHovered, setIsHovered] = useState(false);
@@ -77,6 +78,36 @@ export function ClickBtn2(props) {
                 onMouseEnter={onMouse}
                 onMouseLeave={offMouse}
                 onClick={event => { authAPI(event, formData, setError, setInputNullError) }}
+            >
+            <img
+                src={isHovered ? click1Img : click2Img}
+                alt='ClickButton'
+            />
+            </button>
+        </div>
+    );
+}
+
+/* 클릭 버튼 (랜딩화면) */
+export function ClickBtnL(props) {
+
+    const { formData, setError, setInputNullError } = props;
+    const [isHovered, setIsHovered] = useState(false);
+
+    const onMouse = () => {
+        setIsHovered(true);
+    };
+    const offMouse = () => {
+        setIsHovered(false);
+    };
+
+    return (
+        <div className='button-container'>
+            <button
+                className='clickimgbtn'
+                onMouseEnter={onMouse}
+                onMouseLeave={offMouse}
+                onClick={event => { LPauthAPI(event, formData, setError, setInputNullError) }}
             >
             <img
                 src={isHovered ? click1Img : click2Img}
