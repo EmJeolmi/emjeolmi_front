@@ -5,12 +5,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import diaryBox from '../../images/diarybox.png';
 import cloudImg from '../../images/cloud.png';
 
-import showMyDiaryAPI from "../../service/diary/readMyDiaryAPI";
-import context from "react-bootstrap/esm/AccordionContext";
-
 export function DiaryContent(props) {
 
-    const {handleModalScroll, diaryData, setDiaryData} = props;
+    const {handleModalScroll, diaryData } = props;
  
     return (
         <div className="center-container">

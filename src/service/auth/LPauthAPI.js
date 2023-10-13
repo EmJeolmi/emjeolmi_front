@@ -1,7 +1,8 @@
 import axios from 'axios';
 import LPcheckMyDiaryAPI from '../diary/LPcheckMyDiaryAPI.js';
 
-export const LPauthAPI = async (event, formData, setError, setInputNullError) => {
+export const LPauthAPI = async (event, formData, setError, setInputNullError, yourID) => {
+
     event.preventDefault();
     console.log('formData: ', formData);
 
@@ -27,7 +28,7 @@ export const LPauthAPI = async (event, formData, setError, setInputNullError) =>
             }))
             if (localStorage.getItem('Tokens') !== null) {
                 console.log('로그인 성공'); 
-                LPcheckMyDiaryAPI(event, res.data.data.accessToken);
+                LPcheckMyDiaryAPI(event, res.data.data.accessToken, yourID);
             }
         } catch (error) {
             // 로그인 실패

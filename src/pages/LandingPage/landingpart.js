@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState  } from 'react';
 import axios from 'axios';
 import './landingpart.css';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -8,9 +8,11 @@ import click1Img from '../../images/click2.png';
 import click2Img from '../../images/click1.png';
 import closepImg from '../../images/closep.png';
 import { LPauthAPI } from '../../service/auth/LPauthAPI.js';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function LandingPart() {
+
+    const { yourID } = useParams();
 
     const [formData, setFormData] = React.useState({
         id:"",
@@ -32,7 +34,7 @@ function LandingPart() {
         event.preventDefault();
         try {
             // 로그인 시 authAPI 호출
-            await LPauthAPI(event, formData, setError, setInputNullError);
+            await LPauthAPI(event, formData, setError, setInputNullError, yourID);
         } catch (error) {
             // 필요한 경우 오류 처리
             console.error('로그인 중 오류 발생:', error);

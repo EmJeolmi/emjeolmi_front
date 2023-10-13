@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const LPcheckMyDiaryAPI = async (event, accessToken) => {
+export const LPcheckMyDiaryAPI = async (event, accessToken, yourID) => {
     event.preventDefault();
 
     try {
@@ -19,10 +19,10 @@ export const LPcheckMyDiaryAPI = async (event, accessToken) => {
         console.log('res.data: ', res.data);
         if (res.data.ok === true) {
             console.log('내 일기 읽어오기 성공');
-            window.location.href = "../readdiary";
+            window.location.href = `/chainary/conn/readdiary/${yourID}`;
         } else {
             console.log('내 일기 없음');
-            window.location.href = "../popupcheck";
+            window.location.href = `/chainary/conn/myempty/${yourID}`;
         }
     } catch(error) {
         console.log('내 일기 읽어오기 실패'); 
