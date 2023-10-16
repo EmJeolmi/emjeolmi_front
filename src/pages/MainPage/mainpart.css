@@ -6,14 +6,6 @@
     align-items: center;
 }
 
-.logincheck {
-    margin-top: 4vh;
-    margin-left: 6.5vh;
-    text-align: center;
-    font-size: 13px;
-    color: #FF3F79;
-}
-
 /* 스마트폰 */
 @media (max-width: 768px) { 
     .wrapper-login {

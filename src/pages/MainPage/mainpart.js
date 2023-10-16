@@ -29,9 +29,7 @@ function MainPart() {
     <TitleText />
     <div class="wrapper-login">
       <div className='main_login'>
-        <Login 
-           // IdInfo="내 일기주소를 입력해주세요 !"
-           // PwInfo="로그인 시 비밀번호를 입력해주세요 !"
+        <Login
             labelText="아이디" 
             idText="아이디를 입력해주세요 ~" 
             pwText="비밀번호를 입력해주세요 ~"
@@ -43,16 +41,18 @@ function MainPart() {
     </div>
 
     {/* 아이디 오류일 때 */}
-    <Error display={error}>
-        <div>
-            <label className='logincheck' >이미 있는 아이디이거나 비밀번호 오류입니다.</label>
-        </div>
-    </Error>
-    <InputNullError display={inputNullError}>
-        <div>
-            <label className='logincheck' >아이디와 비밀번호를 입력해주세요.</label>
-        </div>
-    </InputNullError>
+    <div className='errormsg'>
+      <Error display={error}>
+          <div>
+              <label className='logincheck1' >이미 있는 아이디이거나 비밀번호 오류입니다.</label>
+          </div>
+      </Error>
+      <InputNullError display={inputNullError}>
+          <div>
+              <label className='logincheck2' >아이디와 비밀번호를 입력해주세요.</label>
+          </div>
+      </InputNullError>
+    </div>
     </>
   );
 }

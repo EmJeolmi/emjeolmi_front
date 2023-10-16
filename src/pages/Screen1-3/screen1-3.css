@@ -12,6 +12,7 @@
 }
 
 .text-container {
+    height: 100%;
     position: absolute;
     display: grid;
     color: #4b4b4b;
@@ -23,17 +24,18 @@
     margin-bottom: 2.6vh;
     margin-left: 2vh;
     text-align: left;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 /* 일기 내용 */
 .scrollable-content {
     padding: 0 1.1vh;
-    max-width: 32.5vh;
-    max-height: 26.8vh;
+    width: 32.5vh;
+    height: 26.8vh;
     overflow-y: auto;
     line-height: 200%;
     color: #363636;
+    text-align: left;
 
     &::-webkit-scrollbar {
         width: 0.4vh;
@@ -52,10 +54,10 @@
 /* 작성자 아이디 */
 .diarywriter {
     margin-top: 3vh;
-    margin-bottom: 2vh;
-    margin-right: 1vh;
+    margin-bottom: 3%;
+    margin-right: 5%;
     text-align: right;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 @media (max-width: 768px) {

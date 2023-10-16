@@ -10,7 +10,7 @@ function Screen1n4() {
         <div className="image-container">
             <img src={diaryBox} alt="DiaryBox" />
         </div>
-        <div className='text-container'>
+        <div className='no-text-container'>
             <label>일기장이 비어있어요 ㅠㅠ</label>
         </div>
     </div>
