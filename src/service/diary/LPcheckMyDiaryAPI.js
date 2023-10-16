@@ -1,6 +1,8 @@
 import axios from 'axios';
+import checkOtherDiaryAPI from './checkYourDiaryAPI';
 
 export const LPcheckMyDiaryAPI = async (event, accessToken, yourID) => {
+    console.log(event)
     event.preventDefault();
 
     try {
@@ -15,11 +17,13 @@ export const LPcheckMyDiaryAPI = async (event, accessToken, yourID) => {
                 headers: headers,
             }
         );
-        console.log('res: ', res);
-        console.log('res.data: ', res.data);
+      //  console.log('res: ', res);
+     //   console.log('res.data: ', res.data);
         if (res.data.ok === true) {
             console.log('내 일기 읽어오기 성공');
-            window.location.href = `/chainary/conn/readdiary/${yourID}`;
+            // 상대방 일기 있는지 검사
+            checkOtherDiaryAPI(accessToken, yourID);
+            
         } else {
             console.log('내 일기 없음');
             window.location.href = `/chainary/conn/myempty/${yourID}`;
