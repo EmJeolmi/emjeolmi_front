@@ -35,7 +35,7 @@ function Screen2n3() {
         />
         <div className='cloudBtns'>
             <ChangedBtn openChDiary={openChDiary} />
-            <CopyBtn />
+            <CopyBtn diaryData={diaryData}/>
         </div>
         
         {/* 팝업 닫기 */}
