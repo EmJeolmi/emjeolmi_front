@@ -42,7 +42,7 @@ function Screen2n3() {
         {ChDiaryOn && (
             <div className="chdiary-p">
                 <div className="chdiary-content">
-                    <ChDiary />
+                    <ChDiary diaryData={diaryData}/>
                     <button className='close-chdiary' onClick={closeChDiary}>
                         <img src={closepImg} alt="CloseP" />
                     </button>

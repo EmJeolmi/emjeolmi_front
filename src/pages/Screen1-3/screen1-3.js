@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './screen1-3.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import diaryBox from '../../images/diarybox.png';
-import { DiaryContent } from '../../components/Screen2/screesn2-3.js';
 import readYourDiaryAPI from '../../service/diary/readYourDiaryAPI';
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Screen1n3() {
 
@@ -17,7 +16,7 @@ function Screen1n3() {
   });
 
 
-  readYourDiaryAPI(diaryData, setDiaryData, yourID);
+  readYourDiaryAPI(setDiaryData, yourID);
 
     const handleModalScroll = (event) => {
       event.stopPropagation();

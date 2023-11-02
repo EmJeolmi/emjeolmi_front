@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import readYourDiaryAPI from './readYourDiaryAPI';
 
-export const checkOtherDiaryAPI = async (accessToken, yourID, setDiaryData) => {
+export const checkOtherDiaryAPI = async (accessToken, yourID) => {
 
     try {
         const headers = {
@@ -16,7 +16,7 @@ export const checkOtherDiaryAPI = async (accessToken, yourID, setDiaryData) => {
                 timeout: 5000,
                 headers: headers,
                 params: {
-                    ID: yourID,
+                    id: yourID,
                 },
             }
         );
