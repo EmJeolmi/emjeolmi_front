@@ -41,12 +41,26 @@ export function ChangedBtn(props) {
     );
 };
 
-export function CopyBtn() {
+export function CopyBtn(props) {
+
+    const { diaryData } = props;
+    const id = diaryData.id;
+
+    const copyToClipboard = async () => {
+        const textToCopy = `http://localhost:3000/chainary/conn/${id}`;
+        try {
+            await navigator.clipboard.writeText(textToCopy);
+            console.log('복사 성공')
+        } catch (error) {
+            console.log('복사 실패', error);
+        }
+    };
+
 
     return (
         <div className='copyBtn'>
             <img src={cloudImg} alt="CopyBtn" />
-            <button className='cpBtn'>
+            <button className='cpBtn' onClick={copyToClipboard}>
                 주소 복사하기
             </button>
         </div>
