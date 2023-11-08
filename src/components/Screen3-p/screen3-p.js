@@ -9,8 +9,9 @@ export function ChDiary(props) {
     const [visitors, setVisitors] = useState([]); // 방문자 데이터를 저장할 상태
     const {diaryData} = props;
 
-    console.log(diaryData);
-    console.log(diaryData.id)
+    //console.log(diaryData);
+    //console.log(diaryData.id)
+
     useEffect(() => {
         // API를 호출하고 데이터를 상태로 설정
         readVisitorsByUserRidAPI(diaryData.id, setVisitors);
@@ -23,7 +24,7 @@ export function ChDiary(props) {
                 <img src={DiaryBox} alt="DiaryBox" />
             </div>
             <div className="diarylist-p">
-                <label className="chdiarytitle">교환한 일기</label>
+                <label className="chainarytitle">교환한 일기</label>
                 <div className='c-text-container'>
                     {/* 방문자 목록을 매핑하여 화면에 표시 */}
                     {visitors.map((value) => (
