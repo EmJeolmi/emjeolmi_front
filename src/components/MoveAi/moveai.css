@@ -1,0 +1,59 @@
+/* 구름 버튼 */
+.aicloudBtns {
+    margin-top: 5.4vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+}
+.aicloudBtns img {
+    height: 4.6vh;
+    width: auto;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+.aicloudBtns button {
+    margin: 0.6vh 0;
+    margin-top: 1.4vh;
+    padding: 1vh 1vh;
+    position: absolute;
+    z-index: 0.5;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(31, 106, 193);
+
+    &:hover {
+        color:#7c7a7b;
+    }
+}
+
+/* 구름 버튼 */
+.svaicloudBtns {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+}
+.svaicloudBtns img {
+    height: 4.6vh;
+    width: auto;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+.svaicloudBtns button {
+    margin: 0.6vh 0;
+    padding: 1vh 1vh;
+    position: absolute;
+    z-index: 0.5;
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(31, 106, 193);
+
+    &:hover {
+        color:#7c7a7b;
+    }
+}

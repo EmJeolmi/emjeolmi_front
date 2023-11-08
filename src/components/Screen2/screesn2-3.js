@@ -27,20 +27,19 @@ export function DiaryContent(props) {
     );
 };
 
-export function ChangedBtn(props) {
+export function SvChangedBtn(props) {
 
     const {openChDiary} = props;
 
     return (
-        <div className='changedBtn'>
-            <img src={cloudImg} alt="ChangedBtn" />
-            <button className='chBtn'
-                onClick={openChDiary}
-            >교환한 일기</button>
+        <div className='svchangedBtn'>
+            <img src={cloudImg} alt="SvChangedBtn" />
+            <button className='svchBtn' onClick={openChDiary}>
+                교환한 일기
+            </button>
         </div>
     );
 };
-
 export function CopyBtn() {
 
     return (

@@ -1,18 +1,18 @@
 /* 구름 버튼 */
-.cloudBtns {
+.svcloudBtns {
     margin-top: 5.4vh;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center; 
 }
-.cloudBtns img {
+.svcloudBtns img {
     height: 4.6vh;
     width: auto;
-    margin-left: 5vh;
-    margin-right: 5vh;
+    margin-left: 2.8vh;
+    margin-right: 2.8vh;
 }
-.cloudBtns button {
+.svcloudBtns button {
     margin: 0.6vh 0;
     padding: 1vh 1vh;
     position: absolute;
@@ -29,14 +29,15 @@
 }
 
 /* 버튼 간격 조정 */
-.changedBtn button {
-    margin-left: -14.6vh;
-}
-.saveBtn button {
-    margin-left: -13.7vh;
+.svchangedBtn button {
+    margin-left: -12.5vh;
 }
 .copyBtn button {
-    margin-left: -15.4vh;
+    margin-left: -13.4vh;
+}
+.svaicloudBtns button {
+    margin-top: 1.4vh;
+    color: rgb(31, 106, 193);
 }
 
 /* 팝업창 */

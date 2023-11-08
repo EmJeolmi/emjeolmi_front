@@ -3,10 +3,9 @@ import './screen2-3.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { ChDiary } from '../../components/Screen3-p/screen3-p';
 import closepImg from '../../images/closep.png';
-
-import { DiaryContent, ChangedBtn, CopyBtn } from '../../components/Screen2/screesn2-3.js';
+import { DiaryContent, SvChangedBtn, CopyBtn } from '../../components/Screen2/screesn2-3.js';
 import readMyDiaryAPI from '../../service/diary/readMyDiaryAPI';
-import { MoveAiBtn } from '../../components/MoveAi/moveai.js';
+import { SvMoveAiBtn } from '../../components/MoveAi/moveai.js';
 
 function Screen2n3() {
 
@@ -34,10 +33,10 @@ function Screen2n3() {
             diaryData={diaryData}
             setDiaryData={setDiaryData}
         />
-        <div className='cloudBtns'>
-            <ChangedBtn openChDiary={openChDiary} />
+        <div className='svcloudBtns'>
+            <SvChangedBtn openChDiary={openChDiary} />
             <CopyBtn />
-            <MoveAiBtn />
+            <SvMoveAiBtn />
         </div>
         
         {/* 팝업 닫기 */}

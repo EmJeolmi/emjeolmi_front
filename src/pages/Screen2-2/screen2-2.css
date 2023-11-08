@@ -68,7 +68,10 @@
 
 /* 버튼 간격 조정 */
 .changedBtn button {
-    margin-left: -14.6vh;
+    margin-left: -14.7vh;
+}
+.saveBtn button {
+    margin-left: -13.5vh;
 }
 
 /* 팝업창 */
