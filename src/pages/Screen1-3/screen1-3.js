@@ -2,6 +2,7 @@ import React from 'react';
 import './screen1-3.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import diaryBox from '../../images/diarybox.png';
+import { MoveAiBtn } from '../../components/MoveAi/moveai';
 
 function Screen1n3() {
     const handleModalScroll = (event) => {
@@ -9,6 +10,7 @@ function Screen1n3() {
     };
 
   return (
+    <>
     <div className="center-container">
       <div className="image-container">
         <img src={diaryBox} alt="DiaryBox" />
@@ -23,6 +25,8 @@ function Screen1n3() {
         <label className='diarywriter'>w. 작성자아이디</label>
       </div>
     </div>
+    <MoveAiBtn />
+    </>
   );
 }
 

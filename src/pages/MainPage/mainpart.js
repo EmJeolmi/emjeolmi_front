@@ -27,6 +27,7 @@ function MainPart() {
   return (
     <>
     <TitleText />
+    <label className='join_msg'>로그인 시 자동으로 계정이 생성돼요 ♪</label>
     <div class="wrapper-login">
       <div className='main_login'>
         <Login

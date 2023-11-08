@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import diaryUploadAPI from "../../service/diary/diaryUploadAPI";
 import cloudImg from '../../images/cloud.png';
 
-
 export function ContentTextarea(props) {
     const { formData, setFormData } = props;
 

@@ -6,6 +6,7 @@ import closepImg from '../../images/closep.png';
 
 import { DiaryContent, ChangedBtn, CopyBtn } from '../../components/Screen2/screesn2-3.js';
 import readMyDiaryAPI from '../../service/diary/readMyDiaryAPI';
+import { MoveAiBtn } from '../../components/MoveAi/moveai.js';
 
 function Screen2n3() {
 
@@ -36,6 +37,7 @@ function Screen2n3() {
         <div className='cloudBtns'>
             <ChangedBtn openChDiary={openChDiary} />
             <CopyBtn />
+            <MoveAiBtn />
         </div>
         
         {/* 팝업 닫기 */}
