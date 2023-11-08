@@ -1,5 +1,5 @@
 .s-center-container {
-    margin-top: 15%;
+    margin-top: 18.35%;
     display: flex;
     position: relative;
     justify-content: center;
@@ -12,8 +12,23 @@
 }
 
 .s-text-container {
-    margin-top: 3.2%;
+    margin-top: 0.6%;
     position: absolute;
+    font-size: 15px;
+}
+
+.GoDiary2 {
+    width: 100%;
+    margin-top: 9vh;
+    font-size: 18px;
+    font-weight:900;
+    color: rgb(255, 255, 255);
+    border: none;
+    background: transparent; 
+    transition: color 0.3s;
+}
+.GoDiary2:hover {
+    color: rgb(255, 110, 151); 
 }
 
 @media (max-width: 768px) {

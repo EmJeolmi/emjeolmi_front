@@ -28,7 +28,8 @@ export const readMyDiaryAPI = async (diaryData, setDiaryData) => {
             const content = diaryData[0].content;
             const time = diaryData[0].time;
             const id = res.data.id[0].id;
-            // console.log('***', id);
+            //console.log(diaryData[0].content)
+            console.log(res.data)
             setDiaryData({ id, content, time });
         }
     } catch(error) {

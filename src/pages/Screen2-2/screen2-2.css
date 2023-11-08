@@ -1,7 +1,16 @@
+.w-text-container {
+    height: 100%;
+    width: 17.7%;
+    position: absolute;
+    display: grid;
+    color: #4b4b4b;
+}
+
 /* 일기 입력란 */
 .textarea-custom {
     height: 33vh;
-    width: 32.5vh;
+    width: 100%;
+    margin-top: -2%;
     padding: 0 1.1vh;
     resize: none;
     background: none;
@@ -11,6 +20,7 @@
     color: #363636;
     overflow-wrap: break-word;
     white-space: pre-line;
+    text-align: left;
 
     &::-webkit-scrollbar {
         width: 0.4vh;

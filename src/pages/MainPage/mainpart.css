@@ -1,17 +1,19 @@
+/* 가입 안내 */
+.join_msg {
+    width: 100%;
+    margin-top: 22.5%;
+    margin-left: 1.5%;
+    position:absolute;
+    font-size: 13px;
+    color: #ff86a8;
+}
+
 .wrapper-login {
     margin-top: 25%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-.logincheck {
-    margin-top: 4vh;
-    margin-left: 6.5vh;
-    text-align: center;
-    font-size: 13px;
-    color: #FF3F79;
 }
 
 /* 스마트폰 */

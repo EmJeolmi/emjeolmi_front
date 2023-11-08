@@ -10,12 +10,12 @@ function AutoPart() {
       event.stopPropagation();
     };
 
-    const [sentiment, setSentiment] = useState({
+  const [sentiment, setSentiment] = useState({
         todaySummary:'',
     });
 
     readSentimentAPI(sentiment, setSentiment);
-
+  
     return (
         <>
         <div className='autoimg'>
