@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-export const readMyDiaryAPI = async (diaryData, setDiaryData) => {
+
+export const readYourDiaryAPI = async (diaryData, setDiaryData, yourID) => {
+
+  
 
     try {
         const storedTokens = JSON.parse(localStorage.getItem('Tokens'));
@@ -14,22 +17,18 @@ export const readMyDiaryAPI = async (diaryData, setDiaryData) => {
             };
 
             const res = await axios.get(
-                'http://localhost:8080/api/diary/MydiaryRead',
+                `http://localhost:8080/api/diary/${yourID}`,
                 {
                     timeout: 5000,
                     headers: headers, // 헤더 추가
                 }
             );
-            diaryData = res.data.data;
-            // console.log('--------&&', diaryData[0].rid);
-            // console.log('--------&&', diaryData[0].content);
-            // console.log('--------&&', diaryData[0].time);
-            // const rid = diaryData[0].rid;
-            const content = diaryData[0].content;
-            const time = diaryData[0].time;
-            const id = res.data.id[0].id;
-            //console.log(diaryData[0].content)
-            console.log(res.data)
+
+
+            const time = res.data.data[0].time;
+            const content = res.data.data[0].content;
+            const id = res.data.id;
+           
             setDiaryData({ id, content, time });
         }
     } catch(error) {
@@ -38,4 +37,4 @@ export const readMyDiaryAPI = async (diaryData, setDiaryData) => {
     }
 }
 
-export default readMyDiaryAPI;
+export default readYourDiaryAPI;

@@ -35,7 +35,7 @@ function Screen2n3() {
         />
         <div className='svcloudBtns'>
             <SvChangedBtn openChDiary={openChDiary} />
-            <CopyBtn />
+            <CopyBtn diaryData={diaryData}/>
             <SvMoveAiBtn />
         </div>
         
