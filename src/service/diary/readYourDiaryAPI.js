@@ -1,9 +1,7 @@
 import axios from 'axios';
 
 
-export const readYourDiaryAPI = async (diaryData, setDiaryData, yourID) => {
-
-  
+export const readYourDiaryAPI = async (setDiaryData, yourID) => {
 
     try {
         const storedTokens = JSON.parse(localStorage.getItem('Tokens'));
@@ -20,7 +18,8 @@ export const readYourDiaryAPI = async (diaryData, setDiaryData, yourID) => {
                 `http://localhost:8080/api/diary/${yourID}`,
                 {
                     timeout: 5000,
-                    headers: headers, // 헤더 추가
+                    headers: headers,
+                    id: yourID, // 헤더 추가
                 }
             );
 

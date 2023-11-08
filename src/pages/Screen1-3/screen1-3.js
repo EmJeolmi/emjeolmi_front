@@ -5,7 +5,7 @@ import diaryBox from '../../images/diarybox.png';
 import { MoveAiBtn } from '../../components/MoveAi/moveai';
 import { DiaryContent } from '../../components/Screen2/screesn2-3.js';
 import readYourDiaryAPI from '../../service/diary/readYourDiaryAPI';
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Screen1n3() {
 
@@ -18,7 +18,7 @@ function Screen1n3() {
   });
 
 
-  readYourDiaryAPI(diaryData, setDiaryData, yourID);
+  readYourDiaryAPI(setDiaryData, yourID);
 
     const handleModalScroll = (event) => {
       event.stopPropagation();

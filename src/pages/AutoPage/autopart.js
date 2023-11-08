@@ -3,12 +3,19 @@ import './autopart.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import aiImg from '../../images/drawing_sample.jpg';
 import AidiaryBox from '../../images/aibox.png';
+import readSentimentAPI from '../../service/diary/readSentimentAPI';
 
 function AutoPart() {
     const handleModalScroll = (event) => {
       event.stopPropagation();
     };
 
+  const [sentiment, setSentiment] = useState({
+        todaySummary:'',
+    });
+
+    readSentimentAPI(sentiment, setSentiment);
+  
     return (
         <>
         <div className='autoimg'>
@@ -22,7 +29,7 @@ function AutoPart() {
             <div className='text-aicontainer'>
                 <div className="scrollable-aicontent" onWheel={handleModalScroll}>
                     <label className='aicontents'>
-                        메롱 ~ 가로 길이는 이 정도까지 가능요 울랄라 
+                      {sentiment.todaySummary}
                     </label>
                 </div>
             </div>
