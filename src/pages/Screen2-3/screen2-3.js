@@ -36,7 +36,7 @@ function Screen2n3() {
         />
         <div className='cloudBtns'>
             <ChangedBtn openChDiary={openChDiary} />
-            <CopyBtn />
+            <CopyBtn diaryData={diaryData}/>
             <MoveAiBtn />
         </div>
         
