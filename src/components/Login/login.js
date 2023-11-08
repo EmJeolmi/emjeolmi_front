@@ -17,7 +17,7 @@ export function TitleText() {
 /* 로그인 input */
 export function Login(props) {
 
-    const { labelText, idText, pwText, formData, setFormData } = props;
+    const { formData, setFormData } = props;
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -27,20 +27,19 @@ export function Login(props) {
     return (
         <>
         <div className='login_input'>
-            {/* <label className='id_info' htmlFor='login_info'>{IdInfo}</label> */}
             <div className='login_inputId'>
-                <label className='id_label' htmlFor='login_id'>{labelText}</label>
+                <label className='id_label' htmlFor='login_id'>아이디</label>
                 <div class="background-wrap">
                     <input
                         type='text'
                         name='id'
                         className='login_id'
-                        placeholder={idText}
+                        placeholder='아이디를 입력해주세요 ~'
                         onChange={(event) => { handleChange(event) }}
                     />
                 </div>
             </div>
-            {/* <label className='pw_info' htmlFor='login_info'>{PwInfo}</label> */}
+
             <div className='login_inputPw'>
                 <label className='pw_label' htmlFor='login_pw'>비밀번호</label>
                 <div class="background-wrap">
@@ -48,7 +47,7 @@ export function Login(props) {
                         type='password'
                         name='password'
                         className='login_pw'
-                        placeholder={pwText}
+                        placeholder='비밀번호를 입력해주세요~'
                         onChange={(event) => { handleChange(event) }}
                     />
                 </div>
@@ -91,7 +90,7 @@ export function ClickBtnM(props) {
 /* 클릭 버튼 (랜딩화면) */
 export function ClickBtnL(props) {
 
-    const { formData, setError, setInputNullError } = props;
+    const { formData, setError, setInputNullError, yourID } = props;
     const [isHovered, setIsHovered] = useState(false);
 
     const onMouse = () => {
@@ -107,7 +106,7 @@ export function ClickBtnL(props) {
                 className='clickimgbtn'
                 onMouseEnter={onMouse}
                 onMouseLeave={offMouse}
-                onClick={event => { LPauthAPI(event, formData, setError, setInputNullError) }}
+                onClick={event => { LPauthAPI(event, formData, setError, setInputNullError, yourID) }}
             >
             <img
                 src={isHovered ? click1Img : click2Img}

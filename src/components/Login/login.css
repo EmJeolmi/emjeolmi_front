@@ -5,15 +5,6 @@
     margin-bottom: -42vh;
 }
 
-/* 안내 메세지 */
-.id_info, .pw_info {
-    width: 50%;
-    text-align: left;
-    margin-left: 9%;
-    font-size: 11px;
-    color: rgb(255, 143, 190);
-}
-
 /* input 타이틀 */
 .login_inputId label, .login_inputPw label {
     width: 32%;
@@ -99,17 +90,6 @@
         font-size: 32px;
         margin-top: 26vh;
         margin-bottom: -84%;
-    }
-
-    /* 안내 메세지 */
-    .id_info, .pw_info {
-        width: 100%;
-        margin-left: 24%;
-        font-size: 10px;
-        color: rgb(255, 143, 190);
-    }
-    .id_info {
-        margin-bottom: -50%;
     }
 
     /* input 타이틀 */

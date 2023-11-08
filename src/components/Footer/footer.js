@@ -9,7 +9,7 @@ function Footer(props) {
     return (
         <div className='copyright'>
             <Link to={"/aboutDiary"}>
-                © 2023 EmJolMi
+                © 2023 EmJeolMi
             </Link>
         </div>
         

@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-
-export const readYourDiaryAPI = async (setDiaryData, yourID) => {
+export const readSentimentAPI = async (diaryData, setDiaryData) => {
 
     try {
         const storedTokens = JSON.parse(localStorage.getItem('Tokens'));
@@ -15,20 +14,16 @@ export const readYourDiaryAPI = async (setDiaryData, yourID) => {
             };
 
             const res = await axios.get(
-                `http://localhost:8080/api/diary/${yourID}`,
+                'http://localhost:8080/api/diary/MydiaryRead',
                 {
                     timeout: 5000,
-                    headers: headers,
-                    id: yourID, // 헤더 추가
+                    headers: headers, // 헤더 추가
                 }
             );
-
-
-            const time = res.data.data[0].time;
-            const content = res.data.data[0].content;
-            const id = res.data.id;
-           
-            setDiaryData({ id, content, time });
+            diaryData = res.data.data;
+            console.log('--------&&', diaryData[0].todaySummary);
+            const todaySummary = diaryData[0].todaySummary
+            setDiaryData({ todaySummary });
         }
     } catch(error) {
         console.log('내 일기 읽어오기 실패'); 
@@ -36,4 +31,4 @@ export const readYourDiaryAPI = async (setDiaryData, yourID) => {
     }
 }
 
-export default readYourDiaryAPI;
+export default readSentimentAPI;
